@@ -7,6 +7,7 @@ export const addLiftTraversal = async (req, res) => {
     res.status(200).json(liftTraversal);
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
   }
 };
 
@@ -16,6 +17,7 @@ export const getLastLiftTraversal = async (req, res) => {
     res.status(200).json(liftTraversal);
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
   }
 };
 
@@ -26,6 +28,7 @@ export const getLiftTraversalsByNoOfPerson = async (req, res) => {
     res.status(200).json(liftTraversals);
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
   }
 };
 
@@ -37,6 +40,7 @@ export const deleteLiftTraversalById = async (req, res) => {
     res.status(200).json(liftTraversal);
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
   }
 };
 
@@ -50,5 +54,6 @@ export const updateLiftTraversal = async (req, res) => {
     res.status(200).json(liftTraversal);
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
   }
 };
