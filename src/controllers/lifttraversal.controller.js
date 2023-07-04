@@ -11,6 +11,17 @@ export const addLiftTraversal = async (req, res) => {
   }
 };
 
+export const getLiftTraversal = async (req, res) => {
+  console.log('test')
+  try {
+    const liftTraversal = await lifttraversalModel.find()
+    res.status(200).json(liftTraversal);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+};
+
 export const getLastLiftTraversal = async (req, res) => {
   try {
     const liftTraversal = await lifttraversalModel.findOne().sort({ _id: -1 });

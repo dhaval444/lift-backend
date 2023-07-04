@@ -3,6 +3,7 @@ import {
   addLiftTraversal,
   deleteLiftTraversalById,
   getLastLiftTraversal,
+  getLiftTraversal,
   getLiftTraversalsByNoOfPerson,
   updateLiftTraversal,
 } from "../controllers/lifttraversal.controller.js";
@@ -10,6 +11,7 @@ import {
 const router = new Router();
 
 router.get("/lasttraversal", getLastLiftTraversal);
+router.get("/alltraversal",getLiftTraversal);
 router.get("/lifttraversals", getLiftTraversalsByNoOfPerson);
 router.post("/lifttraversal", addLiftTraversal);
 router.put("/lifttraversal/:id", updateLiftTraversal);
