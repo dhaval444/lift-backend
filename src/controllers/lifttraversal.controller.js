@@ -23,9 +23,10 @@ export const getLiftTraversal = async (req, res) => {
 };
 
 export const getLastLiftTraversal = async (req, res) => {
+  // const noOfPerson = req.query.person;
   try {
     const liftTraversal = await lifttraversalModel.findOne().sort({ _id: -1 });
-    res.status(200).json(liftTraversal);
+    res.status(200).json(liftTraversal.toFloor);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
